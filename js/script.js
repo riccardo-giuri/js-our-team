@@ -1,3 +1,6 @@
+/**
+ * @type {object[]}
+ */
 const teamArray = [
     {
         name:  "Wayne Barnett",
@@ -37,18 +40,28 @@ const teamArray = [
     
 ]
 
-
+/**
+ * @type {Element}
+ */
 const memberListElement = document.querySelector("#memberList");
+
 
 printArrayToConsole(teamArray);
 printArrayToDOM(memberListElement, teamArray);
 
-
+/**
+ * Print a given array values to the console
+ * @param {object[]} arrayToPrint The array that will be printed in console
+ */
 function printArrayToConsole(arrayToPrint) {
     arrayToPrint.forEach(element => console.log(`nome: ${element.name}, role: ${element.role}, picture: ${element.picture}`));
 }
 
-
+/**
+ * Take values from a given array and they will be printed in a given Element in the DOM
+ * @param {Element} htmlelement The Element in HTML where you want to print the array
+ * @param {object[]} arrayToPrint The Array that contains the object that will be printed
+ */
 function printArrayToDOM(htmlelement, arrayToPrint) {
     arrayToPrint.forEach((element) => {
         let listItem = document.createElement("li");
